@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "vallore-main",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

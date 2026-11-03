@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{ page_title | escape }} — {{ shop.name | escape }}</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+
+
+<link rel="canonical" href="{{ canonical_url }}">
+{{ content_for_header }}
+{{ "vallore.css" | asset_url | stylesheet_tag }}
+</head><body>
+{{ content_for_layout }}
+<script src="{{ "vallore.js" | asset_url }}"></script>
+{% if request.page_type == "product" %}<script>setView("product");</script>{% endif %}
+</body></html>
